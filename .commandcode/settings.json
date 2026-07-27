@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(git add -A && git commit -F - <<'EOF' Initial commit: BigOrange sitio web (Next.js) Co-authored-by: CommandCodeBot <noreply@commandcode.ai> EOF)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

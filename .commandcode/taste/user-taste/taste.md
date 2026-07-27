@@ -1,0 +1,13 @@
+# User Taste
+- Communicates entirely in Spanish and expects Spanish-language deliverables and responses. Confidence: 0.95
+- Prefers the agent to proceed autonomously and directly without pausing for confirmation; replies with short approvals like "avanza directo", "dale", "adelante". Confidence: 0.9
+- Builds website projects with Next.js. Confidence: 0.9
+- Prefers Cloudflare for hosting and deployment (Workers and Pages) over Vercel; manages domains in the Cloudflare dashboard and uses the wrangler CLI. Confidence: 0.85
+- Uses Zoho Mail for custom-domain email on client projects. Confidence: 0.65
+- Works as an agency/developer (VerticalAI, verticaltech.ai) building sites for clients; adds a "Desarrollado por VerticalAI" footer credit linking to verticaltech.ai on delivered sites. Confidence: 0.8
+- Builds for the Colombian market: forms include habeas data consent, and content references Colombian context (SOAT, Colombian locations). Confidence: 0.7
+- Responsive design is a hard requirement; actively tests at mobile resolutions and requests mobile-specific behavior (e.g., hiding the hero image on phones). Confidence: 0.9
+- Explicitly wants websites to avoid the "typical AI-generated" look; asks for distinctive, professional, custom design. Confidence: 0.9
+- Iterates with precise visual feedback on layout — alignment, spacing, image size/position — and expects pixel-level refinements. Confidence: 0.8
+- Values conversion-focused UX: strong CTA components and quick quote/lead-capture forms over longer flows like scheduling. Confidence: 0.75
+- Likes elegant, subtle motion (e.g., fade-in-on-scroll) but rejects gratuitous animation (e.g., a slowly floating hero image; prefers fixed, bottom-aligned imagery). Confidence: 0.7
