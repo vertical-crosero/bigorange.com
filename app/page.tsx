@@ -12,10 +12,13 @@ const delays = [0, 120, 240];
 function Logo() {
   return (
     <a className="logo" href="#inicio" aria-label="BigOrange inicio">
-      <span className="logoMark" aria-hidden="true" />
-      <span>
-        Big<span>Orange</span>
-      </span>
+      <Image
+        src="/img/logo-1.png"
+        alt="BigOrange Seguros"
+        width={148}
+        height={54}
+        className="logoImg"
+      />
     </a>
   );
 }

@@ -61,26 +61,12 @@ img {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  font-size: 22px;
-  white-space: nowrap;
 }
 
-.logo span span {
-  color: var(--orange);
-}
-
-.logoMark {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: inline-block;
-  background:
-    radial-gradient(circle at 35% 30%, #ffb06c 0 18%, transparent 19%),
-    var(--orange);
-  box-shadow: none;
+.logoImg {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
 }
 
 .navLinks {
@@ -766,8 +752,8 @@ img {
   color: var(--muted);
 }
 
-.footer .logo {
-  color: var(--ink);
+.footer .logoImg {
+  height: 48px;
 }
 
 .footerCredit {

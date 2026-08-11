@@ -11,9 +11,16 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "BigOrange | Asesoria de seguros",
+  title: "BigOrange | Asesoría de seguros",
   description:
-    "Asesoria personalizada en seguros personales, empresariales y responsabilidad civil con atencion directa en Cali, Colombia."
+    "Asesoría personalizada en seguros personales, empresariales y responsabilidad civil con atención directa en Cali, Colombia.",
+  icons: {
+    icon: [
+      { url: "/img/favicon.ico" },
+      { url: "/img/favicon.svg", type: "image/svg+xml" }
+    ],
+    apple: "/img/logo-2.png"
+  }
 };
 
 export default function RootLayout({
