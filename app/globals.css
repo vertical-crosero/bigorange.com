@@ -39,7 +39,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: oklch(98% 0.008 75 / 0.92);
+  background: #ffffff;
   border-bottom: 1px solid oklch(90% 0.01 75);
   backdrop-filter: blur(8px);
 }
@@ -64,7 +64,7 @@ img {
 }
 
 .logoImg {
-  height: 44px;
+  height: 64px;
   width: auto;
   object-fit: contain;
 }
@@ -750,10 +750,11 @@ img {
   justify-content: space-between;
   gap: 20px;
   color: var(--muted);
+  background: #ffffff;
 }
 
 .footer .logoImg {
-  height: 48px;
+  height: 64px;
 }
 
 .footerCredit {

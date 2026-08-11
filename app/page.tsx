@@ -15,9 +15,11 @@ function Logo() {
       <Image
         src="/img/logo-1.png"
         alt="BigOrange Seguros"
-        width={148}
-        height={54}
+        width={198}
+        height={154}
         className="logoImg"
+        loading="eager"
+        priority
       />
     </a>
   );
@@ -83,43 +85,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="founder sectionShell" id="fundadora">
-          <div className="founderAvatar reveal">
-            <Image
-              src="/img/Subject.png"
-              alt="Sulay Muñoz Paz"
-              width={773}
-              height={1138}
-              sizes="96px"
-            />
-          </div>
-          <div className="reveal" data-delay="100">
-            <p className="eyebrow">La fundadora</p>
-            <blockquote>
-              "Fundé BigOrange para que asesorarse en seguros se sienta cercano, claro y
-              honesto, sin letra pequeña ni promesas vacías."
-            </blockquote>
-            <h2>Sulay Mariam Muñoz Paz</h2>
-            <p className="founderText">
-              Especialista en seguros de automóviles y responsabilidad civil, con más de
-              20 años acompañando a familias y empresas a proteger lo que construyen.
-            </p>
-            <div className="stats">
-              <div>
-                <strong>20+</strong>
-                <span>años de experiencia</span>
-              </div>
-              <div>
-                <strong>17</strong>
-                <span>líneas de seguros</span>
-              </div>
-              <div>
-                <strong>2</strong>
-                <span>especialidades: autos y RC</span>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <section className="sectionShell sectionBlock" id="servicios">
           <div className="sectionIntro centered reveal">
