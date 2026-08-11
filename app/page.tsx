@@ -13,7 +13,7 @@ function Logo() {
   return (
     <a className="logo" href="#inicio" aria-label="BigOrange inicio">
       <Image
-        src="/img/logo-1.png"
+        src="/img/logo-horizontal.png"
         alt="BigOrange Seguros"
         width={198}
         height={154}

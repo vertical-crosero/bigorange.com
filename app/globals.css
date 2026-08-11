@@ -64,7 +64,7 @@ img {
 }
 
 .logoImg {
-  height: 64px;
+  height: 54px;
   width: auto;
   object-fit: contain;
 }
@@ -754,7 +754,7 @@ img {
 }
 
 .footer .logoImg {
-  height: 64px;
+  height: 54px;
 }
 
 .footerCredit {
