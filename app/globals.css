@@ -141,19 +141,19 @@ textarea:focus-visible {
 
 .navDropdownMenu {
   position: absolute;
-  top: calc(100% + 16px);
+  top: 100%;
   left: 50%;
-  translate: -50% 0;
+  translate: -50% -4px;
   min-width: 260px;
-  padding: 6px;
+  padding: 22px 6px 6px;
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 10px;
   box-shadow: 0 8px 32px rgba(34, 31, 27, 0.12);
   opacity: 0;
   pointer-events: none;
-  translate: -50% -6px;
   transition: opacity 0.15s ease, translate 0.15s ease;
+  clip-path: inset(-20px -20px -20px -20px);
 }
 
 .navDropdown:hover .navDropdownMenu {
@@ -237,7 +237,7 @@ textarea:focus-visible {
 
 .hero {
   position: relative;
-  min-height: calc(100dvh - 74px);
+  min-height: calc(80dvh - 74px);
   display: grid;
   grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
   align-items: center;
@@ -452,7 +452,7 @@ textarea:focus-visible {
 .processSection,
 .contactSection,
 .quoteSection {
-  padding: 110px 0;
+  padding: 72px 0;
 }
 
 .sectionIntro {

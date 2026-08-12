@@ -103,15 +103,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="tracks sectionShell" aria-label="Rutas de protección">
-          {protectionTracks.map((track, i) => (
-            <a className="trackCard reveal" data-delay={i * 100} href={track.href} key={track.label}>
-              <span>{track.label}</span>
-              <h2>{track.title}</h2>
-              <p>{track.text}</p>
-            </a>
-          ))}
-        </section>
 
         <section className="sectionShell sectionBlock" id="servicios">
           <div className="sectionIntro split reveal">
@@ -132,7 +123,7 @@ export default function Home() {
         <section className="advisorBand sectionShell reveal" aria-label="Acompañamiento">
           <div className="advisorPortrait">
             <Image
-              src="/img/logo-icon-navy-solid.png"
+              src="/img/logo-icon-white-solid.png"
               alt=""
               width={180}
               height={180}
