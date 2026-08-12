@@ -1,13 +1,46 @@
 import Image from "next/image";
 import QuoteForm from "./components/QuoteForm";
 import ServiceCards from "./components/ServiceCards";
+import Navbar from "./components/Navbar";
 
 const whatsappNumber = "573167650809";
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
   "Hola Sulay, quisiera informacion sobre seguros."
 )}`;
 
-const delays = [0, 120, 240];
+const protectionTracks = [
+  {
+    label: "Personas",
+    title: "Familia, salud y patrimonio",
+    text: "Vida, salud, hogar, autos, SOAT y accidentes personales para decisiones cotidianas de protección.",
+    href: "#servicios",
+  },
+  {
+    label: "Empresas",
+    title: "Operación y continuidad",
+    text: "Pólizas empresariales, transporte, cumplimiento, todo riesgo y arrendamiento para operar con respaldo.",
+    href: "#servicios",
+  },
+  {
+    label: "RC",
+    title: "Responsabilidad civil",
+    text: "Coberturas para profesionales, clínicas, hospitales y actividades con exposición ante terceros.",
+    href: "#servicios",
+  },
+];
+
+const trustPoints = [
+  "Lectura clara del riesgo antes de cotizar",
+  "Comparación entre alternativas del mercado",
+  "Acompañamiento directo en emisión y siniestros",
+];
+
+const process = [
+  ["01", "Diagnóstico", "Entendemos tu actividad, bienes, familia o contrato para definir qué riesgo se debe cubrir."],
+  ["02", "Comparación", "Revisamos opciones de aseguradoras y aterrizamos diferencias de cobertura, exclusiones y costo."],
+  ["03", "Decisión", "Te ayudamos a elegir una póliza coherente y dejamos claro qué queda protegido."],
+  ["04", "Acompañamiento", "Después de emitir, tienes una asesora disponible para renovaciones, dudas y siniestros."],
+];
 
 function Logo() {
   return (
@@ -28,46 +61,31 @@ function Logo() {
 export default function Home() {
   return (
     <>
-      <header className="siteHeader">
-        <nav className="navShell" aria-label="Principal">
-          <Logo />
-          <div className="navLinks">
-            <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#cotizar">Cotizar</a>
-            <a href="#contacto">Contacto</a>
-          </div>
-          <a className="navCta" href={whatsappHref} target="_blank" rel="noreferrer">
-            Escríbenos por WhatsApp
-          </a>
-        </nav>
-      </header>
+      <Navbar />
 
       <main>
         <section className="hero sectionShell" id="inicio">
           <div className="heroOrb heroOrbAnim" aria-hidden="true" />
           <div className="heroCopy">
-            <div className="heroBadge heroAnim" style={{ animationDelay: "0ms" }}>
-              <span />
-              20 años asesorando con confianza
-            </div>
+
             <h1 className="heroAnim" style={{ animationDelay: "180ms" }}>
               Seguros pensados para proteger lo que más te importa.
-            </h1>
-            <p className="heroSlogan heroAnim" style={{ animationDelay: "320ms" }}>
-              Protección real. Trato humano.
-            </p>
+            </h1>            
             <p className="heroText heroAnim" style={{ animationDelay: "450ms" }}>
-              Asesoría integral en seguros para personas y empresas, con el respaldo de
-              Sulay Muñoz Paz y más de dos décadas de experiencia en el sector.
+              BigOrange te ayuda a entender qué cobertura necesitas, comparar
+              opciones y tomar una decisión con respaldo profesional.
             </p>
             <div className="heroActions heroAnim" style={{ animationDelay: "600ms" }}>
               <a className="primaryButton" href="#cotizar">
-                Cotiza en 2 minutos
+                Solicitar asesoría
               </a>
               <a className="secondaryButton" href="#servicios">
-                Ver servicios →
+                Ver pólizas
               </a>
+            </div>
+            <div className="heroProof heroAnim" style={{ animationDelay: "720ms" }}>
+              <strong>20+</strong>
+              <span>años de experiencia orientando decisiones de seguros.</span>
             </div>
           </div>
 
@@ -85,36 +103,72 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="tracks sectionShell" aria-label="Rutas de protección">
+          {protectionTracks.map((track, i) => (
+            <a className="trackCard reveal" data-delay={i * 100} href={track.href} key={track.label}>
+              <span>{track.label}</span>
+              <h2>{track.title}</h2>
+              <p>{track.text}</p>
+            </a>
+          ))}
+        </section>
 
         <section className="sectionShell sectionBlock" id="servicios">
-          <div className="sectionIntro centered reveal">
-            <p className="eyebrow">Portafolio</p>
-            <h2>Un seguro para cada etapa de tu vida</h2>
+          <div className="sectionIntro split reveal">
+            <div>
+              <p className="eyebrow">Portafolio</p>
+              <h2>Tres frentes de protección, una asesoría clara.</h2>
+            </div>
             <p>
-              17 productos organizados en tres frentes de protección, para personas,
-              empresas y responsabilidad civil.
+              No se trata de comprar cualquier póliza. Se trata de identificar
+              la cobertura adecuada para tu etapa personal, operación empresarial
+              o exposición profesional.
             </p>
           </div>
 
           <ServiceCards />
         </section>
 
-        <section className="testimonials sectionShell" aria-label="Clientes">
-          <div className="sectionIntro centered reveal">
-            <p className="eyebrow">Clientes</p>
-            <h2>Lo que dicen quienes confían en nosotros</h2>
+        <section className="advisorBand sectionShell reveal" aria-label="Acompañamiento">
+          <div className="advisorPortrait">
+            <Image
+              src="/img/logo-icon-navy-solid.png"
+              alt=""
+              width={180}
+              height={180}
+            />
           </div>
-          <div className="testimonialGrid">
-            {[1, 2, 3].map((item, i) => (
-              <article className="testimonial reveal" data-delay={delays[i]} key={item}>
-                <p>"Testimonio de cliente — reemplaza con una reseña real."</p>
-                <div>
-                  <span className="avatarDot" />
-                  <span>
-                    <strong>Nombre del cliente</strong>
-                    <small>Seguro contratado</small>
-                  </span>
-                </div>
+          <div className="advisorCopy">
+            <p className="eyebrow">Cómo trabaja BigOrange</p>
+            <h2>La diferencia está en entender el riesgo antes de recomendar una póliza.</h2>
+            <p>
+              Sulay acompaña cada caso con una mirada práctica: qué necesitas
+              proteger, qué exige un contrato, qué puede afectar tu patrimonio y
+              qué exclusiones debes conocer antes de firmar.
+            </p>
+          </div>
+          <ul className="trustList">
+            {trustPoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="processSection sectionShell">
+          <div className="sectionIntro centered reveal">
+            <p className="eyebrow">Proceso</p>
+            <h2>Un proceso pensado para decidir con información.</h2>
+            <p>
+              Desde la primera conversación hasta la renovación, la asesoría
+              mantiene el foco en claridad, respaldo y continuidad.
+            </p>
+          </div>
+          <div className="processGrid">
+            {process.map(([step, title, text], i) => (
+              <article className="processCard reveal" data-delay={i * 80} key={step}>
+                <span>{step}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
               </article>
             ))}
           </div>
@@ -126,7 +180,7 @@ export default function Home() {
           <div>
             <h2>¿Listo para proteger lo que más te importa?</h2>
             <p>
-              Escríbele directamente a Sulay y recibe asesoría personalizada, sin costo.
+              Escríbele directamente a Sulay y recibe una primera orientación sin costo.
             </p>
           </div>
           <a className="lightButton" href={whatsappHref} target="_blank" rel="noreferrer">

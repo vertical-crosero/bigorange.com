@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { categories, services, type ServiceCategory } from "@/data/services";
+import Navbar from "@/app/components/Navbar";
 
 const whatsappNumber = "573167650809";
 const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -43,29 +44,7 @@ export default async function CategoryPage({
 
   return (
     <>
-      <header className="siteHeader">
-        <nav className="navShell" aria-label="Principal">
-          <Link className="logo" href="/" aria-label="BigOrange inicio">
-            <Image
-              src="/img/logo-horizontal.png"
-              alt="BigOrange Seguros"
-              width={198}
-              height={154}
-              className="logoImg"
-              priority
-            />
-          </Link>
-          <div className="navLinks">
-            <Link href="/#inicio">Inicio</Link>
-            <Link href="/#servicios">Servicios</Link>
-            <Link href="/#cotizar">Cotizar</Link>
-            <Link href="/#contacto">Contacto</Link>
-          </div>
-          <a className="navCta" href={whatsappHref} target="_blank" rel="noreferrer">
-            Escríbenos por WhatsApp
-          </a>
-        </nav>
-      </header>
+      <Navbar />
 
       <main>
         <section className="categoryDetailHero sectionShell">
