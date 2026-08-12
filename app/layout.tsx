@@ -23,6 +23,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/"
   },
+  openGraph: {
+    type: "website",
+    locale: "es_CO",
+    url: BASE,
+    siteName: "BigOrange Seguros",
+    title: "BigOrange | Asesoría de seguros en Cali",
+    description:
+      "Asesoría personalizada en seguros personales, empresariales y responsabilidad civil con atención directa en Cali, Colombia. Más de 20 años de experiencia.",
+    images: [
+      {
+        url: "/img/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "BigOrange Seguros — Asesoría de seguros en Cali"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BigOrange | Asesoría de seguros en Cali",
+    description:
+      "Asesoría personalizada en seguros personales, empresariales y responsabilidad civil. Más de 20 años de experiencia en Cali, Colombia.",
+    images: ["/img/og-image.png"]
+  },
   icons: {
     icon: [
       { url: "/img/favicon.ico" },

@@ -24,9 +24,37 @@ export async function generateMetadata({
   const { categoria } = await params;
   const key = categoria as ServiceCategory;
   if (!validKeys.includes(key)) return {};
+
+  const title = categories[key].label;
+  const description = categories[key].description;
+  const url = `https://bigorangeseguros.com/servicios/${key}`;
+
   return {
-    title: `${categories[key].label} | BigOrange Seguros`,
-    description: categories[key].description,
+    title,
+    description,
+    alternates: { canonical: `/servicios/${key}` },
+    openGraph: {
+      type: "website",
+      locale: "es_CO",
+      url,
+      siteName: "BigOrange Seguros",
+      title: `${title} | BigOrange Seguros`,
+      description,
+      images: [
+        {
+          url: "/img/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: `${title} — BigOrange Seguros`
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | BigOrange Seguros`,
+      description,
+      images: ["/img/og-image.png"]
+    }
   };
 }
 
