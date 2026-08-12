@@ -576,12 +576,10 @@ textarea:focus-visible {
   place-items: center;
   width: 180px;
   height: 180px;
-  background: rgba(255, 250, 243, 0.08);
-  border: 1px solid rgba(255, 250, 243, 0.16);
 }
 
 .advisorPortrait img {
-  width: 92px;
+  width: 120px;
 }
 
 .advisorCopy .eyebrow,
