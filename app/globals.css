@@ -910,6 +910,11 @@ textarea:focus-visible {
   gap: 24px;
 }
 
+.quoteWidget {
+  padding: 34px;
+  min-height: 420px;
+}
+
 .quoteGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1143,7 +1148,8 @@ textarea:focus-visible {
 
   .advisorBand,
   .adviceBand,
-  .quoteForm {
+  .quoteForm,
+  .quoteWidget {
     padding: 28px 22px;
   }
 
