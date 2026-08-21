@@ -63,6 +63,11 @@ Columna derecha (`quoteCard`):
 
 `SmilegoPanel` y `GeneralQuotePanel` viven como sub-componentes en el mismo
 archivo (son pequeños y solo se usan aquí; no ameritan archivos separados).
+Las clases `.quoteWidget` y `.quoteForm` (que hoy traen `padding`,
+`min-height`, `display: flex`, etc.) se mueven del `.quoteCard` externo al
+elemento raíz de cada panel (el `div` de `SmilegoPanel` y el `<form>` de
+`GeneralQuotePanel`, respectivamente) — `.quoteCard` queda solo como
+contenedor visual (fondo, borde, sombra) compartido por ambas pestañas.
 
 ### `SmilegoPanel`
 
@@ -106,7 +111,10 @@ en ambas pestañas.
   con el resto del sitio, sin nuevas dependencias visuales), con estado
   `aria-selected` para el subrayado activo.
 - Se agrega una regla `[hidden] { display: none; }` (o se usa el atributo
-  HTML `hidden` nativo) para ocultar el panel inactivo sin desmontarlo.
+  HTML `hidden` nativo) para ocultar el panel inactivo sin desmontarlo. Esta
+  regla debe agregarse **al final** de `globals.css` (después de
+  `.quoteForm`, que también define `display`), para que gane el empate de
+  especificidad y el panel oculto no quede visible por accidente.
 
 ### Archivos afectados
 
