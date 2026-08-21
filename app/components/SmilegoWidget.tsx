@@ -5,6 +5,7 @@ import Script from "next/script";
 const TENANT_KEY = "69932";
 const API_BASE = "https://embeddedapi.segurosmedicosinternacionales.com.co";
 const WIDGET_ID = `smilego-widget-${TENANT_KEY}`;
+const BUTTON_PLACEMENT = 'INLINE_TARGET'
 
 export default function SmilegoWidget() {
   return (
@@ -30,7 +31,9 @@ export default function SmilegoWidget() {
           data-tenant-key={TENANT_KEY}
           data-api-base={API_BASE}
           data-target={`#${WIDGET_ID}`}
-          strategy="afterInteractive"
+          data-button-placement={BUTTON_PLACEMENT}
+          /*strategy="afterInteractive"*/
+          async
         />
       </div>
     </section>
