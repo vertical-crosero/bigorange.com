@@ -31,9 +31,7 @@ export default function SmilegoWidget() {
           data-tenant-key={TENANT_KEY}
           data-api-base={API_BASE}
           data-target={`#${WIDGET_ID}`}
-          data-button-placement={BUTTON_PLACEMENT}
-          /*strategy="afterInteractive"*/
-          async
+          strategy="afterInteractive"
         />
       </div>
     </section>
