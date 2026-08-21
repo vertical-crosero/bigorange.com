@@ -1153,6 +1153,10 @@ textarea:focus-visible {
     padding: 28px 22px;
   }
 
+  .quoteTabs {
+    padding: 18px 22px 0;
+  }
+
   .advisorPortrait {
     width: 128px;
     height: 128px;
@@ -1208,4 +1212,36 @@ textarea:focus-visible {
   .quoteTitle {
     font-size: 32px;
   }
+}
+
+.quoteTabs {
+  display: flex;
+  gap: 4px;
+  padding: 22px 34px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.quoteTabs button {
+  padding: 0 2px 14px;
+  border: none;
+  background: none;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.quoteTabs button[aria-selected="true"] {
+  color: var(--ink);
+  border-color: var(--orange);
+}
+
+.quoteTabs button:hover {
+  color: var(--ink);
+}
+
+[hidden] {
+  display: none;
 }
