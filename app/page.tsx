@@ -1,5 +1,5 @@
 import Image from "next/image";
-import QuoteForm from "./components/QuoteForm";
+import SmilegoWidget from "./components/SmilegoWidget";
 import ServiceCards from "./components/ServiceCards";
 import Navbar from "./components/Navbar";
 
@@ -165,7 +165,7 @@ export default function Home() {
           </div>
         </section>
 
-        <QuoteForm />
+        <SmilegoWidget />
 
         <section className="adviceBand reveal" id="contacto">
           <div>
